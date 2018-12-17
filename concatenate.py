@@ -11,17 +11,22 @@ def concatenate_forecasts(files: list,
     ds = xr.open_mfdataset(
         files,
         concat_dim='reference_time',
-        chunks={'reference_time': 100},
-        decode_cf=False
+        chunks=None,
+        decode_cf=False,
+        parallel=True,
+        autoclose=False
     )
-    ds.to_netcdf(output_path)
+    ds.load().to_netcdf(output_path)
 
 
 def concatenate_timeslices(files: list,
                           output_path: Union[str, os.PathLike]):
     ds = xr.open_mfdataset(
         files,
-        concat_dim='time'
+        concat_dim='time',
+        decode_cf=False,
+        parallel=True,
+        autoclose=True
     )
     ds.to_netcdf(output_path)
 

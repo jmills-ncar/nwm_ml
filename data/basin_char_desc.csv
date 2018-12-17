@@ -1,0 +1,33 @@
+VARIABLE_TYPE,VARIABLE_NAME,DESCRIPTION
+BasinID,DRAIN_SQKM,"Watershed drainage area, sq km, as delineated in our basin boundary"
+Bas_Classif,CLASS,Reference/non-reference class:  REF = reference (least-disturbed hydrologic condition); NON-REF = not reference.
+Bas_Classif,HYDRO_DISTURB_INDX,"Hydrologic ""disturbance index"" score, based on 7 variables: 1) MAJ_DDENS_2009, 2) WATER_WITHDR, 3) change in dam storage 1950-2009, 4) CANALS_PCT, 5) RAW_DIS_NEAREST_MAJ_NPDES, 6) ROADS_KM_SQ_KM, and 7) FRAGUN_BASIN.  Low values = low anthropogenic hydrologic modification in the watershed, high values = high anthropogenic hydologic modification"
+Bas_Morph,BAS_COMPACTNESS,"Watershed compactness ratio, = area/perimeter^2 * 100; higher number = more compact shape.  "
+Bound_QA,DRAIN_SQKM,"Watershed drainage area, sq km, as delineated in our basin boundary (this is the same as what is in the BasinID worksheet, but is duplicated here for convenient comparison to NWIS_DRAIN_SQKM)"
+Climate,WD_BASIN,"Watershed average of annual number of days (days) of measurable precipitation, derived from 30 years of record (1961-1990), 2km PRISM."
+Climate,WD_SITE,"Site average of annual number of days (days) of measurable precipitation, derived from 30 years of record (1961-1990), 2km PRISM."
+Climate,PET,"Mean-annual potential evapotranspiration (PET), estimated using the Hamon (1961) equation. "
+Climate,SNOW_PCT_PRECIP,"Snow percent of total precipitation estimate, mean for period 1901-2000.  From McCabe and Wolock (submitted, 2008), 1km grid."
+Climate,PRECIP_SEAS_IND,"Precipitation seasonality index (Markham, 1970; Dingman, 2002).  Index of how much annual precipitation falls seasonally (high values) or spread out over the year (low values).  Based on monthly precip values from 30 year (1971-2000) PRISM.  Range is 0 (precip spread out exactly evenly in each month) to 1 (all precip falls in a single month)."
+Hydro,STREAMS_KM_SQ_KM,"Stream density, km of streams per watershed sq km, from NHD 100k streams"
+Hydro,MAINSTEM_SINUOUSITY,"Sinuosity of mainstem stream line, from our delineation of mainstem stream lines (see Falcone and others, 2010b).  Defined as curvilinear length of the mainstem stream line divided by the straight-line distance between the end points of the line."
+Hydro,TOPWET,"Topographic wetness index, ln(a/S); where ""ln"" is the natural log, ""a"" is the upslope area per unit contour length and ""S"" is the slope at that point.  See http://ks.water.usgs.gov/Kansas/pubs/reports/wrir.99-4242.html and Wolock and McCabe, 1995 for more detail"
+Hydro,RUNAVE7100,"Estimated watershed annual runoff, mm/year, mean for the period 1971-2000.  Estimation method integrated effects of climate, land use, water use, regulation, etc."
+Hydro,PCT_1ST_ORDER,Percent of stream lengths in the watershed which are first-order streams (Strahler order); from NHDPlus
+Hydro,PCT_2ND_ORDER,Percent of stream lengths in the watershed which are second-order streams (Strahler order); from NHDPlus
+Hydro,PCT_3RD_ORDER,Percent of stream lengths in the watershed which are third-order streams (Strahler order); from NHDPlus
+Hydro,PCT_4TH_ORDER,Percent of stream lengths in the watershed which are fourth-order streams (Strahler order); from NHDPlus
+Hydro,PCT_5TH_ORDER,Percent of stream lengths in the watershed which are fifth-order streams (Strahler order); from NHDPlus
+Hydro,PCT_6TH_ORDER_OR_MORE,Percent of stream lengths in the watershed which are sixth or greater-order streams (Strahler order); from NHDPlus
+Hydro,PCT_NO_ORDER,"Percent of stream lengths in the watershed which do not have any streamorder in NHDPlus; these are typically canals, pipelines, and ditches."
+HydroMod_Dams,NDAMS_2009,"Number of dams in watershed, from our enhanced version of the 2009 National Inventory of Dams (NID), created in December 2010.  See note."
+HydroMod_Dams,RAW_DIS_NEAREST_DAM,Raw straightline distance (km) of gage location to nearest dam in watershed.  
+HydroMod_Other,CANALS_PCT,"Percent of stream kilometers coded as ""Canal"", ""Ditch"", or ""Pipeline"" in NHDPlus"
+HydroMod_Other,RAW_DIS_NEAREST_CANAL,Raw straightline distance (km) of gage location to nearest canal/ditch/pipeline in watershed.  
+HydroMod_Other,PCT_IRRIG_AG,"Percent of watershed in irrigated agriculture, from USGS 2002 250-m MODIS data"
+Landscape_Pat,HIRES_LENTIC_DENS,Density (#/sq km) of Lakes/Ponds + Reservoir water bodies from NHD Hi-Resolution (1:24k) data
+Landscape_Pat,HIRES_LENTIC_MEANSIZ,Mean size (ha) of Lakes/Ponds + Reservoir water bodies from NHD Hi-Resolution (1:24k) data
+Soils,CLAYAVE,Average value of clay content (percentage)
+Soils,SILTAVE,Average value of silt content (percentage)
+Soils,SANDAVE,Average value of sand content (percentage)
+Topo,SLOPE_PCT,"Mean watershed slope, percent. Derived from 100m resolution National Elevation Dataset, so slope values may differ from those calculated from data of other resolutions."
